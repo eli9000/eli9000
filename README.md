@@ -19,12 +19,11 @@ const personality = {
 
 const skills = ['react', 'react-native', 'node.js', 'css', 'html']
 
-export Object.entries(personality).concat(skills)
+const eli = Object.entries(personality).concat(skills)
+
+export eli
 ```
 
-[![](https://img.shields.io/twitter/follow/_eli9000?color=gray&logo=twitter&label=%40_eli9000&style=flat)](https://twitter.com/_eli9000)
-[![](https://img.shields.io/github/followers/eli9000?color=gray&label=%40eli9000&logo=GitHub)](https://github.com/eli9000)
-[![](https://img.shields.io/github/stars/eli9000?color=gray&logo=GitHub)](https://github.com/eli9000)
 ![counter](https://enhlhjqqsgfns4d.m.pipedream.net)
 
 ---

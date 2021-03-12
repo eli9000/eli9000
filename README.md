@@ -17,15 +17,12 @@
     Shredding the gnarnia along side my puppers gives me great pleasure.
     </p>
     <br/>
-
-![counter](https://enhlhjqqsgfns4d.m.pipedream.net)
-
   </div>
   <div style="padding: 20px;">
     <img src="https://media.giphy.com/media/qIzNHdXFBEnyDSrnOW/giphy.gif" width="200"><br><br>
   </div>
 </div>
 
-<br>
+![counter](https://enhlhjqqsgfns4d.m.pipedream.net)
 
 <img align='left' src="https://github-readme-stats.vercel.app/api?username=eli9000&show_icons=true&theme=radical" width="500">

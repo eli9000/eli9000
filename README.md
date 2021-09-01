@@ -4,17 +4,15 @@
 
 ![counter](https://enhlhjqqsgfns4d.m.pipedream.net)
 
-<span style="font-size: 40px">👋🏻 Well met, traveler!</span>
+# 👋🏻 Well met, traveler!
 
----
-
-<span style="font-size: 25px;">Allow myself, to introduce... myself... and my dog!</span>
+## Allow myself, to introduce... myself... and my dog!
 
 _His name is Bert. Albert. Albert Einstein. He bids you a good day!_
 
-### As for myself, well, the name's below my profile pic. 😏
+_As for myself, well, the name's below my profile pic. 😏_
 
-<div style="border-left: 4px solid red; padding-left: 20px; margin: 20px 0">
+</br>
 
 ### **Here are some things I enjoy:**
 
@@ -24,10 +22,12 @@ _His name is Bert. Albert. Albert Einstein. He bids you a good day!_
 1. `Playing sports` & `skateboarding`! Bangin' out fresh flow'n flips of the nollie persuasion is divine. Pickle Ball is rad. Volleyball, tossin' the ol' pig skin, and fling'n around a frisbee are some of my favs! But I don't discriminate when it comes to games that are physical in nature.
 1. Having a `curious mind` 🧠🧐. I derive the utmost satisfaction from being easily intrigued. The more that I learn, the more fantastical things appear. Tis' indeed a **Wonderful World** in which we live... and don't even get me _started_ on the `Cosmos`...
 
-</div>
+</br>
 
 OK, that's enough for now... I should probably get back to work, and I reckon **YOU** have better things to do with your time!
 
 ## Thanks for reading! Safe travels, friend!
+
+</br>
 
 <img align='left' style="margin-top: 40px" src="https://github-readme-stats.vercel.app/api?username=eli9000&show_icons=true&theme=radical" width="100%">

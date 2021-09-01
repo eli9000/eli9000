@@ -6,11 +6,13 @@
 
 # 👋🏻 Well met, traveler!
 
-## Allow myself, to introduce... myself... and my dog!
+### Allow myself, to introduce... myself... and my dog!
 
-_His name is Bert. Albert. Albert Einstein. He bids you a good day!_
+</br>
 
-_As for myself, well, the name's below my profile pic. 😏_
+> _His name is Bert. Albert. Albert Einstein. He bids you a good day!_
+
+_As for myself, well, the name's below the profile pic. 😏_
 
 </br>
 
@@ -26,7 +28,7 @@ _As for myself, well, the name's below my profile pic. 😏_
 
 OK, that's enough for now... I should probably get back to work, and I reckon **YOU** have better things to do with your time!
 
-## Thanks for reading! Safe travels, friend!
+### **Thanks for reading! Safe travels, friend!**
 
 </br>
 

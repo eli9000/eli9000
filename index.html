@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>git.e9k.dev</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-    }
-    h1 {
-      margin: 0;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    p {
-      line-height: 1.6;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Welcome to git.e9k.dev</h1>
-  </header>
-  <main>
-    <p>This is my GitHub Pages site, hosted on a custom subdomain.</p>
-    <p>Check out my <a href="https://github.com/eli9000">GitHub profile</a> for more projects.</p>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Eli Johnson - Software Engineer & Developer Portfolio" />
+    <title>Eli Johnson - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Eli Johnson</h1>
+          <p class="subtitle">Software Engineer & Developer</p>
+          <a href="#about" class="cta-button">View My Work</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-card">
+            <h3>Background</h3>
+            <p>I'm Eli, a software engineer with a passion for building innovative solutions. Originally from Nikiski, Alaska, I bring a unique perspective shaped by the Last Frontier's spirit of adventure and self-reliance.</p>
+          </div>
+          <div class="about-card">
+            <h3>Interests</h3>
+            <p>Beyond code, I'm passionate about technology, the great outdoors, and spending time with my family. Whether it's tinkering with Raspberry Pi projects, 3D printing, or exploring the cosmos through a curious mind, I'm always learning.</p>
+          </div>
+          <div class="about-card">
+            <h3>Philosophy</h3>
+            <p>I believe in continuous learning and staying curious. The intersection of technology and creativity drives me to build meaningful projects that make a difference.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h4>Frontend</h4>
+            <p>React, JavaScript, HTML/CSS</p>
+          </div>
+          <div class="skill-item">
+            <h4>Backend</h4>
+            <p>Node.js, APIs, Databases</p>
+          </div>
+          <div class="skill-item">
+            <h4>Tools</h4>
+            <p>Git, GitHub, VS Code</p>
+          </div>
+          <div class="skill-item">
+            <h4>Other</h4>
+            <p>Raspberry Pi, 3D Printing, IoT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="github">
+      <div class="container">
+        <h2>GitHub Activity</h2>
+        <div class="github-stats">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eli9000&langs_count=5&theme=tokyonight" alt="Top Languages" />
+          <img src="https://github-readme-stats.vercel.app/api/?username=eli9000&count_private=true&theme=tokyonight&show_icons=true" alt="GitHub Stats" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-links">
+          <a href="https://github.com/eli9000" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:contact@e9k.dev" class="contact-link">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Eli Johnson. Built with passion.</p>
+        <img src="https://enhlhjqqsgfns4d.m.pipedream.net" alt="" style="display: none;" />
+      </footer>
+    </footer>
+  </body>
 </html>

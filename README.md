@@ -30,3 +30,6 @@ OK, that's enough for now... I should probably get back to work, and I reckon **
 
 </br>
 
+[![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=eli9000&langs_count=5&theme=tokyonight)]()
+
+[![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=eli9000&count_private=true&theme=tokyonight&showicons=true)]()

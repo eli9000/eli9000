@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -35,16 +35,50 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 100%
-  );
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
 .hero-content {
   text-align: center;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 40px var(--accent-glow),
+    inset 0 0 40px rgba(0, 212, 255, 0.2);
+  border: 2px solid var(--accent);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-image-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 60px var(--accent-glow),
+    inset 0 0 60px rgba(0, 212, 255, 0.3);
+  border-color: #00ffaa;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.profile-image-wrapper:hover .profile-image {
+  transform: scale(1.05);
 }
 
 .hero-content h1 {
@@ -61,6 +95,13 @@ header {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   color: var(--text-secondary);
   margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cta-button {
@@ -81,6 +122,27 @@ header {
   box-shadow: 0 10px 40px var(--accent-glow);
 }
 
+.resume-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--accent);
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.resume-button:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px var(--accent-glow);
+}
+
 /* Section Styling */
 section {
   padding: 5rem 0;
@@ -94,7 +156,7 @@ section h2 {
 }
 
 section h2::after {
-  content: "";
+  content: '';
   display: block;
   width: 80px;
   height: 4px;
@@ -116,19 +178,12 @@ section h2::after {
 }
 
 #projects::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-      circle at 15% 30%,
-      rgba(0, 212, 255, 0.08) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(0, 255, 170, 0.08) 0%,
-      transparent 50%
-    );
+  background:
+    radial-gradient(circle at 15% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(0, 255, 170, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -142,11 +197,7 @@ section h2::after {
 }
 
 .project-card {
-  background: linear-gradient(
-    145deg,
-    var(--bg-secondary) 0%,
-    rgba(26, 31, 58, 0.85) 100%
-  );
+  background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(26, 31, 58, 0.85) 100%);
   border: 2px solid rgba(0, 212, 255, 0.2);
   border-radius: 16px;
   overflow: hidden;
@@ -160,7 +211,8 @@ section h2::after {
 .project-card:hover {
   transform: translateY(-8px) scale(1.01);
   border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3),
+  box-shadow:
+    0 20px 40px rgba(0, 212, 255, 0.3),
     0 0 0 1px rgba(0, 212, 255, 0.35);
 }
 
@@ -273,12 +325,7 @@ section h2::after {
 }
 
 #projects h2 {
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    #00ffaa 50%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(135deg, var(--accent) 0%, #00ffaa 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -298,22 +345,15 @@ section h2::after {
 }
 
 #about::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 30% 20%,
-      rgba(0, 255, 170, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 70% 80%,
-      rgba(0, 212, 255, 0.1) 0%,
-      transparent 50%
-    );
+  background:
+    radial-gradient(circle at 30% 20%, rgba(0, 255, 170, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -330,7 +370,8 @@ section h2::after {
   height: auto;
   border-radius: 20px;
   border: 3px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2),
+  box-shadow:
+    0 20px 40px rgba(0, 212, 255, 0.2),
     0 0 0 1px rgba(0, 212, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
@@ -341,7 +382,8 @@ section h2::after {
 .about-image:hover {
   transform: scale(1.02);
   border-color: var(--accent);
-  box-shadow: 0 30px 60px rgba(0, 212, 255, 0.4),
+  box-shadow:
+    0 30px 60px rgba(0, 212, 255, 0.4),
     0 0 0 2px rgba(0, 212, 255, 0.3);
 }
 
@@ -355,11 +397,7 @@ section h2::after {
 }
 
 .about-card {
-  background: linear-gradient(
-    145deg,
-    var(--bg-secondary) 0%,
-    rgba(26, 31, 58, 0.8) 100%
-  );
+  background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(26, 31, 58, 0.8) 100%);
   padding: 2.5rem 2rem;
   border-radius: 16px;
   border: 2px solid rgba(0, 212, 255, 0.2);
@@ -370,17 +408,13 @@ section h2::after {
 }
 
 .about-card::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.05) 0%,
-    rgba(0, 255, 170, 0.05) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 255, 170, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -388,7 +422,8 @@ section h2::after {
 .about-card:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3),
+  box-shadow:
+    0 20px 40px rgba(0, 212, 255, 0.3),
     0 0 0 1px rgba(0, 212, 255, 0.5);
 }
 
@@ -480,12 +515,7 @@ section h2::after {
 
 /* Enhanced section title */
 #about h2 {
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    #00ffaa 50%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(135deg, var(--accent) 0%, #00ffaa 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -506,22 +536,15 @@ section h2::after {
 }
 
 #skills::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 20% 50%,
-      rgba(0, 212, 255, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(0, 255, 170, 0.1) 0%,
-      transparent 50%
-    );
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 170, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -535,11 +558,7 @@ section h2::after {
 }
 
 .skill-item {
-  background: linear-gradient(
-    145deg,
-    var(--bg-secondary) 0%,
-    rgba(26, 31, 58, 0.8) 100%
-  );
+  background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(26, 31, 58, 0.8) 100%);
   padding: 2.5rem 2rem;
   border-radius: 16px;
   text-align: center;
@@ -551,17 +570,13 @@ section h2::after {
 }
 
 .skill-item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.05) 0%,
-    rgba(0, 255, 170, 0.05) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 255, 170, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -569,7 +584,8 @@ section h2::after {
 .skill-item:hover {
   border-color: var(--accent);
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3),
+  box-shadow:
+    0 20px 40px rgba(0, 212, 255, 0.3),
     0 0 0 1px rgba(0, 212, 255, 0.5);
 }
 
@@ -764,12 +780,7 @@ section h2::after {
 
 /* Enhanced section title */
 #skills h2 {
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    #00ffaa 50%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(135deg, var(--accent) 0%, #00ffaa 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -816,22 +827,15 @@ section h2::after {
 }
 
 #contact::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 50% 30%,
-      rgba(0, 212, 255, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 20% 70%,
-      rgba(0, 255, 170, 0.1) 0%,
-      transparent 50%
-    );
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(0, 255, 170, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -849,11 +853,7 @@ section h2::after {
 
 .contact-link {
   padding: 1.5rem 2rem;
-  background: linear-gradient(
-    145deg,
-    var(--bg-secondary) 0%,
-    rgba(26, 31, 58, 0.8) 100%
-  );
+  background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(26, 31, 58, 0.8) 100%);
   color: var(--text-primary);
   text-decoration: none;
   border-radius: 16px;
@@ -867,17 +867,13 @@ section h2::after {
 }
 
 .contact-link::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.05) 0%,
-    rgba(0, 255, 170, 0.05) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 255, 170, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -886,7 +882,8 @@ section h2::after {
   border-color: var(--accent);
   background: rgba(0, 212, 255, 0.1);
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3),
+  box-shadow:
+    0 20px 40px rgba(0, 212, 255, 0.3),
     0 0 0 1px rgba(0, 212, 255, 0.5);
 }
 
@@ -955,12 +952,7 @@ section h2::after {
 
 /* Enhanced section title */
 #contact h2 {
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    #00ffaa 50%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(135deg, var(--accent) 0%, #00ffaa 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -974,26 +966,18 @@ footer {
   padding: 3rem 2rem;
   color: var(--text-secondary);
   border-top: 2px solid rgba(0, 212, 255, 0.2);
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 100%
-  );
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   position: relative;
 }
 
 footer::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at 50% 0%,
-    rgba(0, 212, 255, 0.05) 0%,
-    transparent 50%
-  );
+  background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 

@@ -93,8 +93,21 @@ header {
 
 .hero-content .subtitle {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--text-secondary);
+  background: linear-gradient(135deg, #00ffaa 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 30px rgba(0, 255, 170, 0.3);
+}
+
+.hero-content .sub-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--accent);
   margin-bottom: 2rem;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .hero-buttons {

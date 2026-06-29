@@ -25,6 +25,33 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Unified page backdrop — one continuous gradient, no section seams */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      165deg,
+      var(--bg-primary) 0%,
+      #0d1230 18%,
+      var(--bg-secondary) 35%,
+      #0c1128 52%,
+      var(--bg-secondary) 68%,
+      #0b1028 85%,
+      var(--bg-primary) 100%
+    ),
+    radial-gradient(ellipse 90% 55% at 15% 8%, rgba(0, 212, 255, 0.11) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 85% 18%, rgba(0, 255, 170, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 25% 42%, rgba(0, 255, 170, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 75% 50% at 78% 58%, rgba(0, 212, 255, 0.08) 0%, transparent 52%),
+    radial-gradient(ellipse 85% 45% at 50% 82%, rgba(100, 80, 255, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 40% at 12% 92%, rgba(0, 212, 255, 0.06) 0%, transparent 50%);
 }
 
 /* ── Global animation layers ── */
@@ -125,7 +152,6 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   overflow: hidden;
 }
 
@@ -390,9 +416,6 @@ section h2::after {
   background: linear-gradient(90deg, var(--accent), #00ffaa);
   margin: 1rem auto 0;
   border-radius: 2px;
-  animation: lineExpand 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
 }
 
 @keyframes lineExpand {
@@ -408,24 +431,7 @@ section h2::after {
 
 /* Projects Section */
 #projects {
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 50%,
-    var(--bg-primary) 100%
-  );
   position: relative;
-  overflow: hidden;
-}
-
-#projects::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 15% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 85% 70%, rgba(0, 255, 170, 0.08) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .projects-grid {
@@ -587,27 +593,7 @@ section h2::after {
 }
 /* About Section */
 #about {
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 50%,
-    var(--bg-primary) 100%
-  );
   position: relative;
-  overflow: hidden;
-}
-
-#about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(0, 255, 170, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .about-hero {
@@ -772,27 +758,7 @@ section h2::after {
 
 /* Skills Section */
 #skills {
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 50%,
-    var(--bg-primary) 100%
-  );
   position: relative;
-  overflow: hidden;
-}
-
-#skills::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 255, 170, 0.1) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .skills-grid {
@@ -1037,27 +1003,7 @@ section h2::after {
 
 /* Contact Section */
 #contact {
-  background: linear-gradient(
-    135deg,
-    var(--bg-primary) 0%,
-    var(--bg-secondary) 50%,
-    var(--bg-primary) 100%
-  );
   position: relative;
-  overflow: hidden;
-}
-
-#contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 50% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 20% 70%, rgba(0, 255, 170, 0.1) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .contact-links {
@@ -1163,20 +1109,8 @@ footer {
   text-align: center;
   padding: 3rem 2rem;
   color: var(--text-secondary);
-  border-top: 2px solid rgba(0, 212, 255, 0.2);
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-top: 1px solid rgba(0, 212, 255, 0.08);
   position: relative;
-}
-
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 footer p {
@@ -1211,21 +1145,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scroll-driven parallax on sections */
+/* Scroll-driven parallax on section headings */
 @supports (animation-timeline: view()) {
-  section {
-    animation: sectionParallax linear both;
+  section h2::after {
+    animation: lineExpand 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
-
-  @keyframes sectionParallax {
-    from {
-      opacity: 0.6;
-    }
-    to {
-      opacity: 1;
-    }
+    animation-range: entry 0% cover 30%;
   }
 }
 

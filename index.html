@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header>
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-aurora" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-content">
-          <div class="profile-image-wrapper">
+          <div class="profile-image-wrapper reveal reveal-scale is-visible">
+            <div class="profile-ring"></div>
             <img src="me.JPG" alt="Eli Johnson" class="profile-image" />
           </div>
-          <h1>J. Eli Johnson</h1>
-          <p class="subtitle">From Equations to Code</p>
+          <h1 data-split-text>J. Eli Johnson</h1>
+          <p class="subtitle" data-typewriter>From Equations to Code</p>
           <div class="sub-subtitle">
             <span class="sub-item">Building Solutions</span>
             <span class="sub-divider">•</span>
@@ -23,9 +29,9 @@
             <span class="sub-divider">•</span>
             <span class="sub-item">Problem Solver at Scale</span>
           </div>
-          <div class="hero-buttons">
-            <a href="#about" class="cta-button">Let's GO!</a>
-            <a href="resume.pdf" class="resume-button" download="E_Johnson_Sr_Software_Engineer.pdf">Download Resume</a>
+          <div class="hero-buttons reveal reveal-up is-visible" style="--reveal-delay: 0.8s">
+            <a href="#about" class="cta-button" data-magnetic>Let's GO!</a>
+            <a href="resume.pdf" class="resume-button" data-magnetic download="E_Johnson_Sr_Software_Engineer.pdf">Download Resume</a>
           </div>
         </div>
       </div>
@@ -35,15 +41,15 @@
       <div class="container">
         <h2>A Bit About Me</h2>
         <div class="about-content">
-          <div class="about-card">
+          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
             <h3>Background</h3>
             <p>Former evangelist of equations and eternal truths—yes, I was a math teacher. Now a devoted practitioner of software engineering: problem-solving at scale, without the politics that too often dilute our classrooms.</p>
           </div>
-          <div class="about-card">
+          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
             <h3>Interests</h3>
             <p>I love spending time with my infant son, my 3/yo daughter, my wife and my dog, Bert. Teaching my kids about anything and everything, to appreciate the infinite beauty all around them, to be curious and ponder the nature of things.</p>
           </div>
-          <div class="about-card">
+          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
             <h3>Philosophy</h3>
             <p>I believe in continuous learning and constant curiosity. Having an open-minded attitude and being introspective. The more I learn, the more I realize how much I don't know. Only a fool believes he knows everything, after all.</p>
           </div>
@@ -55,42 +61,42 @@
       <div class="container">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.05s">
             <div class="skill-icon">⚛️</div>
             <h4>Frontend</h4>
             <p>React, JS/TS, HTML/CSS, Next.js, Redux, Tailwind, Material UI</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
             <div class="skill-icon">⚙️</div>
             <h4>Backend</h4>
             <p>Node/Express, Python, GraphQL, MongoDB, MQTT, SQL, REST APIs</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.15s">
             <div class="skill-icon">☁️</div>
             <h4>DevOps</h4>
             <p>AWS, GCP, Azure, Docker, CI/CD, Git, Linux, Bash, Postman</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
             <div class="skill-icon">🔗</div>
             <h4>Web3</h4>
             <p>Ethereum, NFTs, Smart Contracts, Wallets, Dapps</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.25s">
             <div class="skill-icon">🤖</div>
             <h4>AI</h4>
             <p>Prompt Engineer, MCP Agents, Workflows (n8n, ComfyUI), API Integration</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
             <div class="skill-icon">🛠️</div>
             <h4>Tools</h4>
             <p>Webiny CMS, Prismic CMS, Magento, Shopify, Stripe, PayPal, WordPress</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.35s">
             <div class="skill-icon">📱</div>
             <h4>Mobile</h4>
             <p>React Native, Flutter, Xcode, Android Studio, Native Modules</p>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.4s">
             <div class="skill-icon">🔧</div>
             <h4>Other</h4>
             <p>Raspberry Pi, IoT, 3D Printing, Robotics, Home Automation</p>
@@ -103,7 +109,7 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
             <div class="project-header">
               <h3>Nerd United (NFTs)</h3>
               <span class="project-tag">site</span>
@@ -147,7 +153,7 @@
               </a>
             </div>
           </div> -->
-          <div class="project-card">
+          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
             <div class="project-header">
               <h3>Q Sciences</h3>
               <span class="project-tag">site</span>
@@ -169,7 +175,7 @@
               </a>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
             <div class="project-header">
               <h3>Infragauge App</h3>
               <span class="project-tag">.mov</span>
@@ -191,12 +197,12 @@
       <div class="container">
         <h2>Online Profiles</h2>
         <div class="contact-links">
-          <a href="resume.pdf" class="contact-link resume-link" download="E_Johnson_Sr_Software_Engineer.pdf">Resume</a>
-          <a href="https://github.com/eli9000" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/eli9000" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://profile.indeed.com/p/elij-9tgnt2j" class="contact-link" target="_blank" rel="noopener noreferrer">Indeed</a>
-          <a href="https://stackoverflow.com/users/6024876/eli-johnson" class="contact-link" target="_blank" rel="noopener noreferrer">Stack Overflow</a>
-          <a href="https://wakatime.com/a-look-back-at-2024/6f5849ce-184a-45ce-83c4-1d9b7fc6d34a/woybdypywe" class="contact-link" target="_blank" rel="noopener noreferrer">WakaTime 2024</a>
+          <a href="resume.pdf" class="contact-link resume-link reveal reveal-up" data-magnetic download="E_Johnson_Sr_Software_Engineer.pdf" style="--reveal-delay: 0.05s">Resume</a>
+          <a href="https://github.com/eli9000" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.1s">GitHub</a>
+          <a href="https://www.linkedin.com/in/eli9000" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.15s">LinkedIn</a>
+          <a href="https://profile.indeed.com/p/elij-9tgnt2j" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.2s">Indeed</a>
+          <a href="https://stackoverflow.com/users/6024876/eli-johnson" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.25s">Stack Overflow</a>
+          <a href="https://wakatime.com/a-look-back-at-2024/6f5849ce-184a-45ce-83c4-1d9b7fc6d34a/woybdypywe" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.3s">WakaTime 2024</a>
         </div>
       </div>
     </section>
@@ -204,7 +210,8 @@
     <footer>
       <div class="container">
         <p>&copy; 2025 <em>site.eli9000.com</em></p>
-      </footer>
+      </div>
     </footer>
+    <script src="animations.js" defer></script>
   </body>
 </html>

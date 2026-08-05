@@ -673,6 +673,23 @@ h1 {
   object-fit: contain;
 }
 
+/* square-ish marks size by tile height instead of width */
+.card-media .logo-img-square {
+  width: auto;
+  height: 62%;
+}
+
+/* the featured wide card keeps a shallower band */
+.card-wide .card-media-logo {
+  aspect-ratio: 21 / 9;
+}
+
+@media (max-width: 860px) {
+  .card-wide .card-media-logo {
+    aspect-ratio: 16 / 9;
+  }
+}
+
 .lab-svg {
   width: 100%;
   height: 100%;

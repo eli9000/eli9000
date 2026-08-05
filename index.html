@@ -3,213 +3,470 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Eli Johnson - Software Engineer & Developer Portfolio" />
-    <title>site.eli9000.com</title>
+    <title>Eli Johnson — From Equations to Code</title>
+    <meta
+      name="description"
+      content="J. Eli Johnson — senior software engineer in Eagle Mountain, UT. Ex-math teacher turned React/TypeScript engineer. Enterprise portals, SEO rebuilds, and an AI agent fleet via eDot Dev."
+    />
+    <meta property="og:title" content="Eli Johnson — From Equations to Code" />
+    <meta
+      property="og:description"
+      content="Senior software engineer in Eagle Mountain, UT. Ex-math teacher. Enterprise portals, SEO machines, AI agents."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://site.eli9000.com/" />
+    <meta property="og:image" content="https://site.eli9000.com/apps/me-hero.jpg" />
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="%23FBFBF8"/><path d="M8 48 C 22 46, 30 38, 38 28 S 52 12, 58 10" stroke="%23E06D1F" stroke-width="6" fill="none" stroke-linecap="round"/><rect x="50" y="44" width="10" height="12" fill="%2323303D"/></svg>' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=Caveat:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#given">Skip to content</a>
+    <div class="margin-rule" aria-hidden="true"></div>
 
-    <header>
-      <canvas id="particle-canvas" aria-hidden="true"></canvas>
-      <div class="hero-aurora" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-content">
-          <div class="profile-image-wrapper reveal reveal-scale is-visible">
-            <div class="profile-ring"></div>
-            <img src="me.JPG" alt="Eli Johnson" class="profile-image" />
-          </div>
-          <h1 data-split-text>J. Eli Johnson</h1>
-          <p class="subtitle" data-typewriter>From Equations to Code</p>
-          <div class="sub-subtitle">
-            <span class="sub-item">Building Solutions</span>
-            <span class="sub-divider">•</span>
-            <span class="sub-item">Teaching Ideas</span>
-            <span class="sub-divider">•</span>
-            <span class="sub-item">Problem Solver at Scale</span>
-          </div>
-          <div class="hero-buttons reveal reveal-up is-visible" style="--reveal-delay: 0.8s">
-            <a href="#about" class="cta-button" data-magnetic>Let's GO!</a>
-            <a href="resume.pdf" class="resume-button" data-magnetic download="E_Johnson_Sr_Software_Engineer.pdf">Download Resume</a>
+    <nav class="topnav" aria-label="Primary">
+      <a class="topnav-name" href="#top">e.johnson<span class="blink">_</span></a>
+      <div class="topnav-links">
+        <a href="#given">Given</a>
+        <a href="#work">Work</a>
+        <a href="#examples">Examples</a>
+        <a href="#qed">Q.E.D.</a>
+        <a class="topnav-resume" href="resume.pdf" download="E_Johnson_Sr_Software_Engineer.pdf">Résumé ↓</a>
+      </div>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">J. Eli Johnson · Senior Software Engineer · Eagle Mountain, UT</p>
+          <h1>
+            From equations<br />to <span class="pen-underline">code.</span>
+          </h1>
+          <p class="lede">
+            I spent years teaching high-school math — fielding every possible variant of
+            <em>“when will we ever use this?”</em> Then I went and used all of it. Seven-plus years
+            now as a senior front-end engineer shipping e-commerce, Web3, and SaaS platforms, and
+            these days I run an AI-accelerated dev studio from the foot of the Wasatch.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#qed">Work with me</a>
+            <a class="btn btn-ghost" href="resume.pdf" download="E_Johnson_Sr_Software_Engineer.pdf">Download résumé</a>
           </div>
         </div>
+        <figure class="hero-photo">
+          <div class="photo-frame">
+            <img src="apps/me-hero.jpg" alt="Eli Johnson in the Wasatch foothills in autumn" width="500" height="375" />
+            <figcaption class="hand">the Wasatch, October — office with the best view</figcaption>
+          </div>
+        </figure>
       </div>
+
+      <figure class="container career-plot" aria-label="Career timeline plotted as a rising curve">
+        <div class="plot-scroll">
+          <svg id="career-svg" viewBox="0 0 820 330" role="img" aria-labelledby="plot-title plot-desc">
+            <title id="plot-title">Career plotted as a function</title>
+            <desc id="plot-desc">
+              A rising curve from 2009, teaching high school math, through a 2018 career change into
+              software, to leading platforms and founding an AI dev studio by 2026.
+            </desc>
+            <!-- axes -->
+            <line class="axis" x1="60" y1="285" x2="800" y2="285" />
+            <line class="axis" x1="60" y1="285" x2="60" y2="20" />
+            <text class="axis-label" x="800" y="322" text-anchor="end">t (years)</text>
+            <text class="axis-label" x="60" y="12" text-anchor="start">problems solved</text>
+            <!-- ticks -->
+            <g class="ticks">
+              <text x="98" y="303">2009</text>
+              <text x="440" y="303">2018</text>
+              <text x="554" y="303">2021</text>
+              <text x="592" y="303">2022</text>
+              <text x="706" y="303">2025</text>
+              <text x="744" y="303">now</text>
+            </g>
+            <!-- the function -->
+            <path
+              id="career-curve"
+              class="curve"
+              d="M 98 244 C 200 240, 330 232, 440 210 C 490 199, 520 172, 554 152 C 570 142, 578 132, 592 122 C 630 96, 672 82, 706 70 C 722 64, 734 58, 744 52"
+            />
+            <!-- teaching span annotation -->
+            <text class="hand-note" x="190" y="160">“when will we ever use this?”</text>
+            <path class="hand-arrow" d="M 300 172 C 306 196, 322 210, 340 224" fill="none" />
+            <!-- plotted points -->
+            <g class="plot-pt" style="--pt: 1">
+              <circle cx="98" cy="244" r="5" />
+              <text class="pt-label" x="98" y="266" text-anchor="start">B.S. Math → the classroom</text>
+            </g>
+            <g class="plot-pt" style="--pt: 2">
+              <circle cx="440" cy="210" r="5" />
+              <text class="pt-label" x="448" y="240" text-anchor="start">self-taught → first dev role</text>
+            </g>
+            <g class="plot-pt" style="--pt: 3">
+              <circle cx="554" cy="152" r="5" />
+              <text class="pt-label" x="540" y="142" text-anchor="end">$10M/mo storefront</text>
+            </g>
+            <g class="plot-pt" style="--pt: 4">
+              <circle cx="592" cy="122" r="5" />
+              <text class="pt-label" x="598" y="112" text-anchor="middle">led Web3 platform, 10+ brands</text>
+            </g>
+            <g class="plot-pt" style="--pt: 5">
+              <circle cx="706" cy="70" r="5" />
+              <text class="pt-label" x="700" y="96" text-anchor="middle">founded eDot Dev</text>
+            </g>
+            <g class="plot-pt plot-pt-now" style="--pt: 6">
+              <circle class="pen-circle" cx="744" cy="52" r="14" />
+              <circle cx="744" cy="52" r="5" />
+              <text class="pt-label hand-note" x="752" y="36" text-anchor="middle">you are here</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption class="plot-caption">fig. 1 — career as a function of time. not drawn to scale; growth is.</figcaption>
+      </figure>
     </header>
 
-    <section id="about">
-      <div class="container">
-        <h2>A Bit About Me</h2>
-        <div class="about-content">
-          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
-            <h3>Background</h3>
-            <p>Former evangelist of equations and eternal truths—yes, I was a math teacher. Now a devoted practitioner of software engineering: problem-solving at scale, without the politics that too often dilute our classrooms.</p>
-          </div>
-          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
-            <h3>Interests</h3>
-            <p>I love spending time with my infant son, my 3/yo daughter, my wife and my dog, Bert. Teaching my kids about anything and everything, to appreciate the infinite beauty all around them, to be curious and ponder the nature of things.</p>
-          </div>
-          <div class="about-card reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
-            <h3>Philosophy</h3>
-            <p>I believe in continuous learning and constant curiosity. Having an open-minded attitude and being introspective. The more I learn, the more I realize how much I don't know. Only a fool believes he knows everything, after all.</p>
+    <main>
+      <section id="given" class="section">
+        <div class="container">
+          <p class="eyebrow">§ 1 · Given</p>
+          <h2>Three premises</h2>
+          <div class="premises">
+            <article class="premise reveal">
+              <p class="premise-no">(i)</p>
+              <h3>The background</h3>
+              <p>
+                Former evangelist of equations and eternal truths — yes, a math teacher. Now a
+                devoted practitioner of software engineering: same job, honestly. You take an idea
+                and explain it so clearly that even a computer understands it.
+              </p>
+            </article>
+            <article class="premise reveal">
+              <p class="premise-no">(ii)</p>
+              <h3>The household</h3>
+              <p>
+                Husband, dad of two, and staff to a dog named Bert. Most of my off-hours go to
+                teaching my kids to be curious — to notice the infinite beauty all around them and
+                ponder the nature of things.
+              </p>
+            </article>
+            <article class="premise reveal">
+              <p class="premise-no">(iii)</p>
+              <h3>The philosophy</h3>
+              <p>
+                The more I learn, the more I realize how much I don't know. Only a fool believes he
+                knows everything — so I stay curious, stay introspective, and keep the learning
+                loop running.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.05s">
-            <div class="skill-icon">⚛️</div>
-            <h4>Frontend</h4>
-            <p>React, JS/TS, HTML/CSS, Next.js, Redux, Tailwind, Material UI</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
-            <div class="skill-icon">⚙️</div>
-            <h4>Backend</h4>
-            <p>Node/Express, Python, GraphQL, MongoDB, MQTT, SQL, REST APIs</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.15s">
-            <div class="skill-icon">☁️</div>
-            <h4>DevOps</h4>
-            <p>AWS, GCP, Azure, Docker, CI/CD, Git, Linux, Bash, Postman</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
-            <div class="skill-icon">🔗</div>
-            <h4>Web3</h4>
-            <p>Ethereum, NFTs, Smart Contracts, Wallets, Dapps</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.25s">
-            <div class="skill-icon">🤖</div>
-            <h4>AI</h4>
-            <p>Prompt Engineer, MCP Agents, Workflows (n8n, ComfyUI), API Integration</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
-            <div class="skill-icon">🛠️</div>
-            <h4>Tools</h4>
-            <p>Webiny CMS, Prismic CMS, Magento, Shopify, Stripe, PayPal, WordPress</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.35s">
-            <div class="skill-icon">📱</div>
-            <h4>Mobile</h4>
-            <p>React Native, Flutter, Xcode, Android Studio, Native Modules</p>
-          </div>
-          <div class="skill-item reveal reveal-up" data-tilt style="--reveal-delay: 0.4s">
-            <div class="skill-icon">🔧</div>
-            <h4>Other</h4>
-            <p>Raspberry Pi, IoT, 3D Printing, Robotics, Home Automation</p>
-          </div>
+      <section id="work" class="section">
+        <div class="container">
+          <p class="eyebrow">§ 2 · Proof of work</p>
+          <h2>By construction</h2>
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <p class="t-when">2025 — present</p>
+              <div class="t-body">
+                <h3>Founder &amp; Principal Engineer · <span class="t-co">eDot Dev LLC</span></h3>
+                <p>
+                  AI-accelerated dev studio. Current flagship engagement: <strong>SMT Studio</strong>, a
+                  ground-up rebuild of a multi-tenant benefits &amp; campaign portal for an enterprise
+                  media client — plus SEO rescues and dashboards for local businesses.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <p class="t-when">2022 — 2025</p>
+              <div class="t-body">
+                <h3>Senior Front-End Engineer · <span class="t-co">Nerd United</span></h3>
+                <p>
+                  Led front-end architecture for a white-label Web3 e-commerce template used by 10+
+                  brands. Shipped the NFT utility-activation UI that drove $100k+ in new revenue;
+                  Webiny CMS + Next.js ISR pipeline cut page loads 20%. Mentored junior devs.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <p class="t-when">2021 — 2022</p>
+              <div class="t-body">
+                <h3>Software Engineer · <span class="t-co">Q Sciences</span></h3>
+                <p>
+                  Built a headless React/TypeScript PWA on Magento 2 + Gatsby for a $10M/mo brand.
+                  Checkout time down 50%+, cart abandonment down 30%, $250k processed on the beta
+                  launch weekend.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <p class="t-when">2019 — 2021</p>
+              <div class="t-body">
+                <h3>Full-Stack Developer · <span class="t-co">Ilektronx</span></h3>
+                <p>
+                  Single-handedly built a React Native app with FLIR thermal-camera integration that
+                  cut oil-tank measurement time 80% — and kept workers off the tanks entirely.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item reveal">
+              <p class="t-when">2018 — 2019</p>
+              <div class="t-body">
+                <h3>Full-Stack Developer · <span class="t-co">Acuitus AG</span></h3>
+                <p>
+                  Real-time asset-tracking maps with Google Maps, GeoJSON, RabbitMQ, ElasticSearch,
+                  and Kubernetes. The career change, proven in production.
+                </p>
+              </div>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.1s">
-            <div class="project-header">
-              <h3>Nerd United (NFTs)</h3>
-              <span class="project-tag">site</span>
-            </div>
-            <div class="project-media">
-              <a
-                class="screenshot-link"
-                href="https://app.nerdunited.net"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Nerd Template App"
-              >
-                <img
-                  class="screenshot-image"
-                  src="apps/nerd-nft.png"
-                  alt="Nerd template NFTs screenshot"
-                  loading="lazy"
-                />
+      <section id="examples" class="section">
+        <div class="container">
+          <p class="eyebrow">§ 3 · Worked examples</p>
+          <h2>Selected projects</h2>
+          <div class="cards">
+            <article class="card card-wide reveal">
+              <a class="card-media" href="https://edotdev.ai" target="_blank" rel="noopener noreferrer">
+                <img src="apps/edotdev-site.jpg" alt="edotdev.ai homepage — AI That Works While You Sleep" loading="lazy" />
               </a>
-            </div>
-          </div>
-          <!-- <div class="project-card">
-            <div class="project-header">
-              <h3>Galvan (shopping)</h3>
-              <span class="project-tag">site</span>
-            </div>
-            <div class="project-media">
-              <a
-                class="screenshot-link"
-                href="https://app.galvan.health"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Galvan App"
-              >
-                <img
-                  class="screenshot-image"
-                  src="apps/galvan.png"
-                  alt="Galvan app screenshot"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </div> -->
-          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.2s">
-            <div class="project-header">
-              <h3>Q Sciences</h3>
-              <span class="project-tag">site</span>
-            </div>
-            <div class="project-media">
-              <a
-                class="screenshot-link"
-                href="https://qsciences.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Q Sciences"
-              >
-                <img
-                  class="screenshot-image"
-                  src="apps/qsciences.png"
-                  alt="Q Sciences website screenshot"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="project-card reveal reveal-up" data-tilt style="--reveal-delay: 0.3s">
-            <div class="project-header">
-              <h3>Infragauge App</h3>
-              <span class="project-tag">.mov</span>
-            </div>
-            <div class="project-media">
-              <!-- Replace src with your actual .mov path -->
-              <video class="project-video" controls playsinline preload="metadata" poster="apps/infragauge.png">
-                <source src="apps/demo.mov" type="video/quicktime" />
-                <source src="apps/demo.mov" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>edotdev.ai</h3>
+                  <span class="tag">studio</span>
+                </div>
+                <p>
+                  My dev studio: one developer, four AI agents, building fast. Custom sites, AI
+                  dashboards, SEO migrations, and business automation for companies along the
+                  Wasatch Front — with an agent fleet that literally works while you sleep.
+                </p>
+                <p class="card-stack">Claude · MCP agents · Next.js · Netlify · Supabase</p>
+                <a class="card-link" href="https://edotdev.ai" target="_blank" rel="noopener noreferrer">edotdev.ai →</a>
+              </div>
+            </article>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Online Profiles</h2>
-        <div class="contact-links">
-          <a href="resume.pdf" class="contact-link resume-link reveal reveal-up" data-magnetic download="E_Johnson_Sr_Software_Engineer.pdf" style="--reveal-delay: 0.05s">Resume</a>
-          <a href="https://github.com/eli9000" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.1s">GitHub</a>
-          <a href="https://www.linkedin.com/in/eli9000" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.15s">LinkedIn</a>
-          <a href="https://profile.indeed.com/p/elij-9tgnt2j" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.2s">Indeed</a>
-          <a href="https://stackoverflow.com/users/6024876/eli-johnson" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.25s">Stack Overflow</a>
-          <a href="https://wakatime.com/a-look-back-at-2024/6f5849ce-184a-45ce-83c4-1d9b7fc6d34a/woybdypywe" class="contact-link reveal reveal-up" data-magnetic target="_blank" rel="noopener noreferrer" style="--reveal-delay: 0.3s">WakaTime 2024</a>
+            <article class="card reveal">
+              <div class="card-media card-media-logo">
+                <img src="apps/smt-studio-logo.svg" alt="SMT Studio logo" loading="lazy" class="logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>SMT Studio</h3>
+                  <span class="tag">enterprise · current</span>
+                </div>
+                <p>
+                  Ground-up rebuild of a multi-tenant operations portal for a global payments
+                  program: guided wizards that hide a three-entity data model, autosaved drafts, and
+                  coordinated multi-entity builds with live progress. React/TS SPA, Cognito auth,
+                  environment-agnostic containers on AWS ECS.
+                </p>
+                <p class="card-stack">React · TypeScript · AWS ECS · Cognito</p>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <a class="card-media" href="https://gokeylocksmiths.com" target="_blank" rel="noopener noreferrer">
+                <img src="apps/gokey-site.jpg" alt="GoKey Locksmiths website" loading="lazy" />
+              </a>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>GoKey Locksmiths</h3>
+                  <span class="tag">seo rebuild</span>
+                </div>
+                <p>
+                  WordPress → Hugo static rebuild for a Salt Lake locksmith. 10 indexed pages became
+                  59+, with a programmatic 7-city × 5-service SEO matrix, five schema types, 90+
+                  PageSpeed — and the $300/mo hosting bill became $0.
+                </p>
+                <p class="card-stack">Hugo · Netlify · JSON-LD · Technical SEO</p>
+                <a class="card-link" href="https://gokeylocksmiths.com" target="_blank" rel="noopener noreferrer">gokeylocksmiths.com →</a>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-media card-media-lab" aria-hidden="true">
+                <svg viewBox="0 0 400 220" class="lab-svg">
+                  <rect x="130" y="30" width="140" height="170" rx="6" class="lab-rack" />
+                  <g class="lab-units">
+                    <rect x="142" y="44" width="116" height="22" rx="3" />
+                    <rect x="142" y="72" width="116" height="22" rx="3" />
+                    <rect x="142" y="100" width="116" height="22" rx="3" />
+                    <rect x="142" y="128" width="116" height="22" rx="3" />
+                    <rect x="142" y="156" width="116" height="30" rx="3" />
+                  </g>
+                  <g class="lab-lights">
+                    <circle cx="152" cy="55" r="3" />
+                    <circle cx="152" cy="83" r="3" />
+                    <circle cx="152" cy="111" r="3" />
+                    <circle cx="152" cy="139" r="3" />
+                    <circle cx="152" cy="171" r="3" />
+                  </g>
+                  <text x="285" y="60" class="lab-note hand-note">agents live here</text>
+                  <path d="M 282 66 C 270 80, 262 66, 252 78" class="lab-arrow" />
+                </svg>
+              </div>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>The Basement Lab</h3>
+                  <span class="tag">homelab · r&amp;d</span>
+                </div>
+                <p>
+                  An always-on agent fleet across a DGX Spark, a stack of Raspberry Pis, and retired
+                  MacBooks: autonomous voice agents with local STT/TTS, Home Assistant everywhere,
+                  self-hosted services, and trading-bot experiments. Where ideas get stress-tested
+                  before any client sees them.
+                </p>
+                <p class="card-stack">LangGraph · local LLMs · Home Assistant · Raspberry Pi · DGX</p>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <a class="card-media" href="https://app.nerdunited.net" target="_blank" rel="noopener noreferrer">
+                <img src="apps/nerd-nft.jpg" alt="Nerd United NFT storefront" loading="lazy" />
+              </a>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>Nerd United</h3>
+                  <span class="tag">web3</span>
+                </div>
+                <p>
+                  White-label Web3 e-commerce template powering 10+ brands. I led the front-end
+                  architecture and shipped the NFT utility UI — carbon credits, node discounts,
+                  reward boosts — worth $100k+ in added revenue.
+                </p>
+                <p class="card-stack">Next.js · Webiny CMS · Ethereum</p>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <a class="card-media" href="https://qsciences.com" target="_blank" rel="noopener noreferrer">
+                <img src="apps/qsciences.jpg" alt="Q Sciences e-commerce site" loading="lazy" />
+              </a>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>Q Sciences</h3>
+                  <span class="tag">e-commerce</span>
+                </div>
+                <p>
+                  Headless React/TS PWA storefront for a $10M/mo wellness brand — checkout cut in
+                  half, Prismic-driven marketing pages, auto-ship and referral flows.
+                </p>
+                <p class="card-stack">React · Gatsby · Magento 2 · Prismic</p>
+              </div>
+            </article>
+
+            <article class="card card-wide reveal">
+              <div class="card-media">
+                <video controls playsinline preload="metadata" poster="apps/infragauge.jpg">
+                  <source src="apps/demo.mov" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3>Infragauge</h3>
+                  <span class="tag">mobile · thermal</span>
+                </div>
+                <p>
+                  React Native app that reads oil-tank levels through a FLIR thermal camera —
+                  measurement time down 80%, and nobody has to climb the tank. Built solo, end to
+                  end, including the native camera modules.
+                </p>
+                <p class="card-stack">React Native · FLIR SDK · native modules</p>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="toolbox" class="section">
+        <div class="container">
+          <p class="eyebrow">§ 4 · Toolbox</p>
+          <h2>Notation</h2>
+          <dl class="toolbox">
+            <div class="tool-row reveal">
+              <dt>Frontend</dt>
+              <dd>React · Next.js · TypeScript · Redux · Tailwind · React Native · Flutter</dd>
+            </div>
+            <div class="tool-row reveal">
+              <dt>Backend</dt>
+              <dd>Node/Express · GraphQL · Python · MongoDB · SQL · REST · MQTT</dd>
+            </div>
+            <div class="tool-row reveal">
+              <dt>Cloud &amp; ops</dt>
+              <dd>AWS · GCP · Firebase · Docker · CI/CD · OpenTofu/Terraform · Linux</dd>
+            </div>
+            <div class="tool-row reveal">
+              <dt>AI &amp; agents</dt>
+              <dd>Claude Code · MCP · LangGraph · n8n · ComfyUI · local STT/TTS · agent orchestration</dd>
+            </div>
+            <div class="tool-row reveal">
+              <dt>Commerce &amp; CMS</dt>
+              <dd>Magento · Shopify · Stripe · Webiny · Prismic · WordPress→Hugo rescues</dd>
+            </div>
+            <div class="tool-row reveal">
+              <dt>Hardware</dt>
+              <dd>Home Assistant · ESPHome · Raspberry Pi · IoT · 3D printing · robotics</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="qed" class="section section-qed">
+        <div class="container">
+          <p class="eyebrow">§ 5 · Q.E.D.</p>
+          <h2>Which was to be demonstrated</h2>
+          <p class="qed-lede">
+            <em>Theorem:</em> whatever you're trying to ship, it ships faster with someone who has
+            shipped it before. <em>Proof:</em> see above.
+          </p>
+          <div class="qed-paths">
+            <div class="qed-card reveal">
+              <h3>For teams hiring</h3>
+              <p>
+                Senior front-end / full-stack engineer — React, Next.js, TypeScript, and whatever
+                the problem actually needs. Remote-friendly, based in Utah.
+              </p>
+              <div class="qed-links">
+                <a class="btn btn-primary" href="resume.pdf" download="E_Johnson_Sr_Software_Engineer.pdf">Résumé</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/eli9000" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn btn-ghost" href="https://github.com/eli9000" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+            <div class="qed-card reveal">
+              <h3>For businesses</h3>
+              <p>
+                A site that ranks, a dashboard that runs your ops, automation that works while you
+                sleep. My studio takes on a few projects at a time.
+              </p>
+              <div class="qed-links">
+                <a class="btn btn-primary" href="https://edotdev.ai" target="_blank" rel="noopener noreferrer">edotdev.ai</a>
+                <a class="btn btn-ghost" href="mailto:eli9000@gmail.com">eli9000@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <p class="qed-more">
+            Also on
+            <a href="https://stackoverflow.com/users/6024876/eli-johnson" target="_blank" rel="noopener noreferrer">Stack Overflow</a>,
+            <a href="https://wakatime.com/a-look-back-at-2024/6f5849ce-184a-45ce-83c4-1d9b7fc6d34a/woybdypywe" target="_blank" rel="noopener noreferrer">WakaTime</a>
+            &amp;
+            <a href="https://profile.indeed.com/p/elij-9tgnt2j" target="_blank" rel="noopener noreferrer">Indeed</a>.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <div class="container">
-        <p>&copy; 2025 <em>site.eli9000.com</em></p>
+      <div class="container footer-row">
+        <p>© 2026 J. Eli Johnson · Eagle Mountain, UT</p>
+        <p class="footer-colophon">set in STIX Two Text &amp; IBM Plex Mono <span class="tombstone">∎</span></p>
       </div>
     </footer>
     <script src="animations.js" defer></script>

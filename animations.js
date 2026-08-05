@@ -22,8 +22,18 @@
     revealEls.forEach((el) => revealObserver.observe(el));
   }
 
-  /* Career plot draws itself when it scrolls into view */
+  /* Career plot draws itself when it scrolls into view. On narrow screens the
+     plot overflows sideways, so after the draw we pan along the x-axis to
+     "you are here" — otherwise phones only ever see the 2009 flat years. */
   const careerSvg = document.getElementById('career-svg');
+  const plotScroll = document.querySelector('.plot-scroll');
+  const panToNow = () => {
+    if (!plotScroll) return;
+    const overflow = plotScroll.scrollWidth - plotScroll.clientWidth;
+    if (overflow > 40) {
+      setTimeout(() => plotScroll.scrollTo({ left: overflow, behavior: 'smooth' }), 1700);
+    }
+  };
   if (careerSvg) {
     if (prefersReducedMotion || !('IntersectionObserver' in window)) {
       careerSvg.classList.add('drawn');
@@ -33,6 +43,7 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               careerSvg.classList.add('drawn');
+              panToNow();
               plotObserver.disconnect();
             }
           });

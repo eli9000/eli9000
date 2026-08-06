@@ -679,6 +679,12 @@ h1 {
   height: 62%;
 }
 
+/* plaque-style logos get their rounded corners back after cropping */
+.card-media .logo-img-plaque {
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(35, 48, 61, 0.18);
+}
+
 /* the featured wide card keeps a shallower band */
 .card-wide .card-media-logo {
   aspect-ratio: 21 / 9;
